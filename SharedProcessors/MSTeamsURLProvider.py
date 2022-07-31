@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/local/autopkg/python
 #
 # Antti Pettinen
 # Copyright 2017 Tampere University of Technology
@@ -35,7 +35,10 @@ class MSTeamsURLProvider(URLGetter):
 
     description = __doc__
     input_variables = {
-        "base_url": {"required": False, "description": ("Default is %s" % BASE_URL),},
+        "base_url": {
+            "required": False,
+            "description": ("Default is %s" % BASE_URL),
+        },
         "environment": {
             "required": False,
             "description": ("Default is %s" % TEAMS_ENVIRONMENT),
@@ -52,8 +55,12 @@ class MSTeamsURLProvider(URLGetter):
         },
     }
     output_variables = {
-        "url": {"description": "URL to the MSTeams release.",},
-        "version": {"description": "The version of the MSTeams release.",},
+        "url": {
+            "description": "URL to the MSTeams release.",
+        },
+        "version": {
+            "description": "The version of the MSTeams release.",
+        },
     }
 
     def main(self):
